@@ -1,0 +1,452 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, blue, purple); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(11, 177, 233); 
+  }
+
+.card {
+    width: 100%;
+    overflow-x: hidden;
+}
+.main-image {
+    background-image: url('../images/bg.jpg');
+    /* background-image: url('../images/pexels-david-besh-884788.jpg');
+    background-image: url('../images/pexels-luis-quintero-1624881.jpg');
+    background-image: url('../images/pexels-no-name-66997.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 800px;
+}
+
+.heading{
+    margin: 0;
+    color: aliceblue;
+    position: relative;
+    width: auto;
+    padding: 20px;
+    background: rgba(red, green, blue, 0.5);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+}
+
+.heading span {
+    text-shadow: 0 0 3px #FF0000, 0 0 15px #0000FF;
+    font-size: 62px;
+    font-weight: bold;
+    font-family: 'Niconne', cursive;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(200, 200, 200, 0.5);
+    cursor: pointer;
+}
+
+.padding-row{
+    margin-top: 30px;
+}
+
+.card-title {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: red; 
+    font-weight: bold;
+}
+
+.card-title span {
+    background-color: rgba(255, 255, 255, 0.7); color: red; font-weight: bold;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+    color: rgb(231, 39, 71);
+}
+
+.padding-row p{
+    font-family: 'Andika New Basic', sans-serif !important;
+    font-size: large;
+}
+
+
+@media(max-width: 600px) {
+    .main-image {
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .heading span {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    .padding-row p{
+        font-size: small;
+        text-align: justify;
+    }
+}
+
+.dark-theme {
+    background-color: rgb(36, 35, 35);
+}
+
+.dark-theme .card {
+    background-color: rgb(53, 50, 50);
+}
+
+.dark-theme p, .dark-theme h5 {
+    color: rgb(233, 169, 169);
+}
+
+* {
+    transition: background-color 0.8s ease, color 1s ease;
+}
+
+.card {
+    transition: background-color 0.8s ease, color 1s ease;
+}
+
+.dark-theme .helper-text {
+    color: white;
+}
+
+.dark-theme input, .dark-theme textarea {
+    color: rgb(240, 152, 152);
+}
+
+.dark-theme .modal {
+    color: rgb(250, 219, 224);
+    background-color: rgb(48, 46, 46);
+}
+
+.dark-theme .modal-footer {
+    background-color: rgb(48, 46, 46);
+
+}
+
+body {
+    overflow-y: scroll;
+}
+
+
+
+/* bacground image */
+.backimg {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.backimg1 {
+    background-image: url('../images/bess-hamiti.jpg');
+}
+
+
+.backimg2 {
+    background-image: url('../images/pexels-stephan-seeber-1261728.jpg');
+}
+
+/* spinner */
+.spinner{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(255,255,255,0.5);
+    z-index:9999;
+    display:none;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    top: 50vh;
+    left: 50vw;
+    z-index:99999;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid red;
+    border-color: pink transparent pink transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+
+
+/* bacground fullscreen edits */
+.light-theme:fullscreen::backdrop {
+    transition: background-color 0.8s ease;
+    background-color: white;
+}
+.dark-theme:fullscreen::backdrop {
+    transition: background-color 0.8s ease;
+    background-color: rgb(36, 35, 35);
+}
+
+
+/* background image transition  */
+.main-image {
+    transition: background-image 0.9s ease;
+}
+
+/* progress bar transition  */
+.progress .determinate {
+    transition: width 1.2s ease-out;
+}
+
+
+/* cards transition  */
+.card {
+    opacity: 0;
+    transition: opacity 2s ease, left 1s ease, right 1s ease;
+    position: relative;
+}
+
+.card:nth-child(even) {
+    left: 100px;
+}
+
+.card:nth-child(odd) {
+    left: -100px;
+}
+
+/* Resume view  */
+.resume {
+    width: 0%;
+    height: 0px;
+    opacity: 0;
+    border: 2px solid black;
+    overflow: scroll;
+    transition: all 0.9s ease;
+}
+
+.resume::-webkit-scrollbar {
+    display: none;
+}
+
+/* Scial media design  */
+.social-media a {
+    transition: all .4s ease-in-out;
+    transform-origin: center;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    transform: rotate(360deg);
+    margin-right: 10px;
+}
+
+/* aligning the project lists   */
+.gd-align .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.gd-align .row .col {
+    margin-left: 0;
+    float: left;
+}
+
+.intro p{
+    transition: opacity 1.1s ease;
+    opacity: 0;
+}
+
+/* chart  */
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+
+.legendcolor {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    top: 5px;
+    left: 5px;
+}
+
+.inlinepblock p {
+    display: inline-block;
+}
+
+
+#setup {
+    /* display: none; */
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(22, 21, 21);
+    color: white;
+    text-align: center;
+    transition: display 1s ease;
+    overflow: hidden;
+}
+#setup {
+    font-family: 'Andika New Basic', sans-serif !important;
+}
+
+#setup h5 {
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
+    text-shadow: 0 0 3px red , 0 0 35px #e62f8a;
+    color: white;
+    font-weight: bold;
+    font-family: 'Niconne', cursive;
+}
+
+#setup h5 {
+    margin: 80px;
+    font-size: 42px;
+}
+
+#setup .first-anime {
+    border-top: 3px solid rgb(83, 187, 83);
+    border-bottom: 3px solid rgb(83, 187, 83);
+    overflow: hidden;
+    padding: 20px 0;
+    max-height: 300px;
+    transition-delay: 0.5s;
+    position: relative;
+    transition: max-height 1.5s ease, padding 1.5s ease;
+}
+
+.first-anime-close {
+    max-height: 0 !important;
+    padding: 0 !important;
+}
+
+.first-anime .blue-anime {
+    position: relative;
+    padding: 5px;
+    display: inline-block;
+    font-size: large;
+    overflow: hidden;
+    color:transparent;
+}
+
+.first-anime .blue-anime::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    color: rgb(8, 101, 241);
+    background-color: rgb(8, 101, 241);
+    transition: left 1s ease-out, color 1.5s ease-in;
+}
+
+.first-anime .go-left::before{
+    left: -100%;
+}
+
+.first-anime .purple-anime {
+    position: relative;
+    padding: 5px;
+    display: inline-block;
+    font-size: large;
+    overflow: hidden;
+    color:transparent;
+}
+
+.first-anime .purple-anime::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: rgb(8, 101, 241);
+    background-color: rgb(97, 8, 241);
+    transition: left 1s ease-out, color 1.5s ease-in;
+}
+
+.first-anime .go-right::before{
+    left: 100%;
+}
+
+.second-anime {
+    border-bottom: 3px solid rgb(83, 187, 83);
+    overflow: hidden;
+    position: relative;
+    max-height: 0;
+    transition: max-height 1.5s ease;
+    font-size: medium;
+}
+
+.second-anime-open {
+    max-height: 250px;
+}
+
+.bounce-ball {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.bounce-ball .box {
+    position: relative;
+    align-items: center;
+    margin: 10px auto;
+    z-index: 9999;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;         /* Turns a square into a circle   */
+    background-color: #FF5722;
+    transition: all 1s ease;
+}
